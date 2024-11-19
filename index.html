@@ -1,41 +1,102 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<<<<<<< HEAD
-    <title>Visualizador</title>
+    <title>Simulador</title>
     <link rel="stylesheet" href="estilos.css">
-=======
-    <title>Interfaz</title>
->>>>>>> b5ed2395c34d834fb03d37b40bd8142974659577
 </head>
 <body>
-    <div id="root">
-        <div class="flex-layout">
+    <header>
+        <h1>Simulador de Autómatas</h1>
+    </header>
 
-            <div class="izq-layout">
+    <main>
+        <div class="container">
 
-                <div class="inputs-layout">
-                    Inputs
+            <!-- Columna Izquierda -->
+            <aside class="left-panel">
+                <button class="btn">Estados</button>
+                <button class="btn btn-alfabeto">Alfabeto</button>
+                <button class="btn">Transiciones</button>
+                <div class="select-section">
+                    <label for="estado-inicial">Estado Inicial:</label>
+                    <select id="estado-inicial">
+                        <option value="">Seleccione</option>
+                        <option value="q1">q1</option>
+                        <option value="q2">q2</option>
+                    </select>
                 </div>
+                <button class="btn">Estados de aceptación</button>
+            </aside>
 
-                <div class="extras-layout">
-                    Extras
+            <!-- Panel Central -->
+            <section class="central-panel">
+                <div class="visualization-area">
+                    <div class="state"></div>
+                    <div class="state"></div>
+                    <div class="state"></div>
                 </div>
+            </section>
 
-            </div>
+            <!-- Columna Inferior -->
+            <section class="bottom-panel">
+                <h3>Casos de prueba</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Caso</th>
+                            <th>Esperado</th>
+                            <th>Actual</th>
+                            <th>Resultado</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="buttons">
+                    <button class="btn">Añadir caso de prueba</button>
+                    <button class="btn">Ejecutar Todos</button>
+                </div>
+            </section>
+        </div>
+    </main>
 
-            <div class="der-layout">
-                <div class="visualizador-layout">
-                    Visualizador
-                </div>
-                <div class="pruebas-layout">
-                    Pruebas
-                </div>
-            </div>
-        </div> 
+    <footer>
+        <p>&copy; 2024 Simulador de Autómatas</p>
+    </footer>
+
+
+    <!-- Modal para gestionar el alfabeto -->
+<div id="modal-alfabeto" class="modal">
+    <div class="modal-content">
+        <h3>Gestión del Alfabeto</h3>
+        <div class="modal-inputs">
+            <label for="alfabeto-list">Listado de símbolos:</label>
+            <select id="alfabeto-list">
+                <option value="a">a</option>
+                <option value="b">b</option>
+                <option value="c">c</option>
+            </select>
+            <button class="btn">Eliminar símbolo</button>
+        </div>
+        <div class="modal-inputs">
+            <label for="nuevo-simbolo">Añadir un nuevo símbolo:</label>
+            <input type="text" id="nuevo-simbolo" placeholder="Ingrese un símbolo">
+            <button class="btn">Añadir símbolo</button>
+        </div>
+        <button class="btn btn-accept">Aceptar</button>
     </div>
+</div>
+
+
+
     <script src="scripts/afn.js"></script>
 </body>
 </html>

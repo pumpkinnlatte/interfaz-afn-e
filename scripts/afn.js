@@ -138,4 +138,37 @@ function main() {
     };
 }
 
+
+document.addEventListener('DOMContentLoaded', () => {
+    // Obtener referencias a elementos
+    const btnAlfabeto = document.querySelector('.btn:nth-child(2)'); // Botón Alfabeto
+    const modalAlfabeto = document.getElementById('modal-alfabeto');
+    const btnCloseModal = modalAlfabeto?.querySelector('.btn-accept');
+
+    // Verificar si los elementos existen antes de trabajar con ellos
+    if (btnAlfabeto && modalAlfabeto && btnCloseModal) {
+        // Mostrar modal al presionar "Alfabeto"
+        btnAlfabeto.addEventListener('click', () => {
+            modalAlfabeto.style.display = 'block';
+            modalAlfabeto.style.opacity = 0; // Inicial opacidad 0
+            setTimeout(() => {
+                modalAlfabeto.style.opacity = 1; // Transición suave a opacidad 1
+            }, 10); // Timeout pequeño para que CSS lo procese
+            document.body.classList.add('modal-active');
+        });
+
+        // Cerrar modal al presionar "Aceptar"
+        btnCloseModal.addEventListener('click', () => {
+            modalAlfabeto.style.opacity = 0; // Transición suave a opacidad 0
+            setTimeout(() => {
+                modalAlfabeto.style.display = 'none'; // Ocultar completamente
+            }, 300); // Tiempo debe coincidir con la duración de la animación en CSS
+            document.body.classList.remove('modal-active');
+        });
+    } else {
+        console.error('No se encontraron los elementos necesarios para el modal.');
+    }
+});
+
+
 main();
