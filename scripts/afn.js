@@ -1,11 +1,59 @@
 
 class Automata {
 
-    Automata(){
+    constructor(){
         this.alfabeto = [];
         this.estados = [];
         this.estadoIncio;
         this.estadosAceptacion = [];
+    }
+
+    //Getters
+
+    get alfabeto(){
+        return this.alfabeto;
+    }
+
+    get estados(){
+        return this.estados;
+    }
+
+    get estadoIncio(){
+        return this.estadoIncio;
+    }
+
+    get estadosAceptacion(){
+        return this.estadosAceptacion;
+    }
+
+    //Setters
+
+    set alfabeto(alfabeto){
+        this.alfabeto = alfabeto;
+    }
+
+    addToAlfabeto(caracter){
+        this.alfabeto.push(caracter);
+    }
+
+    set estados(estados){
+        this.estados = estados;
+    }
+
+    addToEstados(estadoNuevo){
+        this.estados.psuh(estadoNuevo);
+    }
+
+    set estadoIncio(estadoI){
+        this.estadoIncio = estadoI;
+    }
+
+    set estadosAceptacion(estadosAceptacion){
+        this.estadosAceptacion = estadosAceptacion;
+    }
+
+    addToEstadosAceptacion(nuevoEst){
+        this.estadosAceptacion.push(nuevoEst);
     }
 
 }
@@ -17,6 +65,39 @@ class Estado {
         this.simbolo = simbolo; // simbolo para comparar
         this.adyacencias = [] //Lista de adyacencias (Transiciones)
     }
+
+    //Setter
+
+    set nombre(nombre){
+        this.nombre = nombre;
+    }
+
+    set simbolo(simbolo){
+        this.simbolo;
+    }
+
+    set adyacencias(adyacencias){
+        this.adyacencias = adyacencias;
+    }
+
+    addToAdyacencias(nuevaAdyacencia){
+        this.adyacencias.push(nuevaAdyacencia);
+    }
+
+    //Getter
+
+    get nombre(){
+        return this.nombre;
+    }
+
+    get simbolo(){
+        return this.simbolo;
+    }
+
+    get adyacencias(){
+        return this.adyacencias;
+    }
+    
 
     verificarValor(entry){
 
@@ -36,8 +117,9 @@ class Estado {
 }
 
 
-<<<<<<< HEAD
+ const automa = new Automata();
 
-main();
-=======
->>>>>>> 0dc00145589ec36b9996c4a5a3c9a8c0e15f80fb
+ 
+
+
+
