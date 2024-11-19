@@ -104,11 +104,10 @@ footer {
 .modal {
     display: none; /* Inicialmente oculto */
     position: fixed; /* Fijo para que se mantenga en su lugar */
-    top: 0;
-    left: 0;
+    top: 35%;
+    left: 35%;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+    height: 100%; /* Fondo semitransparente */
     z-index: 1000; /* Asegura que el modal esté encima de otros elementos */
     justify-content: center; /* Centrar horizontalmente */
     align-items: center; /* Centrar verticalmente */
