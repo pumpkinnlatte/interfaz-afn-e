@@ -5,7 +5,6 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Simulador</title>
         <link rel="stylesheet" href="estilos.css"> <!-- Estilos generales -->
-        <link rel="stylesheet" href="transiciones.css"> <!-- Estilos para transiciones -->
     </head>
     
 <body>
@@ -79,15 +78,14 @@
         <h3>Gestión del Alfabeto</h3>
         <div class="modal-inputs">
             <label for="alfabeto-list">Listado de símbolos:</label>
-            <select id="alfabeto-list">
-  
-            </select>
-            <button class="btn">Eliminar símbolo</button>
+            <select id="alfabeto-list"></select>
+
+            <button class="btn" id="btn-eliminar-simbolo">Eliminar símbolo</button>
         </div>
         <div class="modal-inputs">
             <label for="nuevo-simbolo">Añadir un nuevo símbolo:</label>
             <input type="text" id="nuevo-simbolo" placeholder="Ingrese un símbolo">
-            <button class="btn">Añadir símbolo</button>
+            <button class="btn" id="btn-anadir-simbolo">Añadir símbolo</button>
         </div>
         <button class="btn btn-accept">Aceptar</button>
     </div>
@@ -97,6 +95,7 @@
     <div class="modal-content">
         <h3>Añadir Transición</h3>
         <form id="form-transicion">
+            <!-- Fila para el estado de origen -->
             <div class="form-group">
                 <label for="from-state">From State:</label>
                 <select id="from-state" required>
@@ -105,6 +104,7 @@
                     <option value="G">G</option>
                 </select>
             </div>
+            <!-- Fila para el símbolo de entrada -->
             <div class="form-group">
                 <label for="input-symbol">Input Symbol:</label>
                 <select id="input-symbol" required>
@@ -114,6 +114,7 @@
                     <option value="λ">λ</option>
                 </select>
             </div>
+            <!-- Fila para el estado destino -->
             <div class="form-group">
                 <label for="to-state">To State:</label>
                 <select id="to-state" required>
@@ -122,6 +123,7 @@
                     <option value="E">E</option>
                 </select>
             </div>
+            <!-- Botones de acción -->
             <div class="form-actions">
                 <button type="submit" class="btn btn-submit">Submit</button>
                 <button type="button" class="btn btn-cancel">Cancel</button>
@@ -129,8 +131,6 @@
         </form>
     </div>
 </div>
-
-
 
 
 <div id="modal-aceptacion" class="modal">
@@ -164,21 +164,19 @@
             <label for="estados-list">Listado de estados:</label>
             <select id="estados-list">
             </select>
-            <button class="btn">Eliminar estado</button>
+            <button class="btn" id="btn-eliminar-estado">Eliminar estado</button>
         </div>
         <div class="modal-inputs">
             <label for="nuevo-estado">Añadir un nuevo estado:</label>
             <input type="text" id="nuevo-estado" placeholder="Ingrese un estado">
-            <button class="btn">Añadir estado</button>
+            <button class="btn" id="btn-nuevo-estado">Añadir estado</button>
         </div>
         <button class="btn btn-accept">Aceptar</button>
     </div>
 </div>
 
-
-
-
+    <script src="scripts/clases.js"></script>
+    <script src="scripts/elementos.js"></script>
     <script src="scripts/afn.js"></script>
-    <script src="script.js"></script>
 </body>
 </html>

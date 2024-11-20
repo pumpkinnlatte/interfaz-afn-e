@@ -67,3 +67,6 @@ btnNuevoEstado = document.querySelector('#btn-nuevo-estado');
 btnEliminarEstado = document.querySelector('#btn-eliminar-estado');
 listadoEstados = document.querySelector('#estados-list');
 inputNombreEstado = document.querySelector('#nuevo-estado');
+
+
+
