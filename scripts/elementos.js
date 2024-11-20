@@ -69,4 +69,12 @@ listadoEstados = document.querySelector('#estados-list');
 inputNombreEstado = document.querySelector('#nuevo-estado');
 
 
+//INPUTS_MODAL-ALFABETO
+
+listadoAlfabeto = document.querySelector('#alfabeto-list');
+btnEliminarSimbolo = document.querySelector('#btn-eliminar-simbolo');
+inputSimbolo = document.querySelector('#nuevo-simbolo');
+btnNuevoSimbolo = document.querySelector('#btn-anadir-simbolo');
+
+
 

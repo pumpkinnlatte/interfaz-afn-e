@@ -91,13 +91,16 @@
     </div>
 </div>
 
+
+    <!-- Modal para gestionar las transiciones -->
+
 <div id="modal-transiciones" class="modal">
     <div class="modal-content">
         <h3>Añadir Transición</h3>
-        <form id="form-transicion">
+       
             <!-- Fila para el estado de origen -->
-            <div class="form-group">
-                <label for="from-state">From State:</label>
+            <div class="modal-inputs">
+                <label for="from-state">Del estado:</label>
                 <select id="from-state" required>
                     <option value="">Seleccione</option>
                     <option value="F">F</option>
@@ -105,8 +108,8 @@
                 </select>
             </div>
             <!-- Fila para el símbolo de entrada -->
-            <div class="form-group">
-                <label for="input-symbol">Input Symbol:</label>
+            <div class="modal-inputs">
+                <label for="input-symbol">Simbolo de entrada:</label>
                 <select id="input-symbol" required>
                     <option value="">Seleccione</option>
                     <option value="a">a</option>
@@ -115,20 +118,17 @@
                 </select>
             </div>
             <!-- Fila para el estado destino -->
-            <div class="form-group">
-                <label for="to-state">To State:</label>
-                <select id="to-state" required>
-                    <option value="">Seleccione</option>
-                    <option value="D">D</option>
-                    <option value="E">E</option>
+            <div class="modal-inputs">
+                <label for="to-state">Al Estado:</label>
+                <select id="to-state" required >
                 </select>
             </div>
             <!-- Botones de acción -->
-            <div class="form-actions">
-                <button type="submit" class="btn btn-submit">Submit</button>
-                <button type="button" class="btn btn-cancel">Cancel</button>
+            <div class="modal-inputs">
+                <button class="btn" id = "btn-agregar-transicion">Agregar</button>
+                <button class="btn btn-accept">Cancelar</button>
             </div>
-        </form>
+
     </div>
 </div>
 

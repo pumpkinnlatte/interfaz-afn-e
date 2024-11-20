@@ -30,7 +30,7 @@ class Automata {
 
 
     addEstado(estadoNuevo){
-        this._estados.psuh(estadoNuevo);
+        this._estados.push(estadoNuevo);
     }
 
     addEstadoAceptacion(nuevoEst){
@@ -63,6 +63,7 @@ class Estado {
         this._nombre = nombre; // nombre del estado
         this._simbolo;         // simbolo para comparar
         this._adyacencias = [] //Lista de adyacencias (Transiciones)
+        this._aceptacion = false;
     }
 
     //Setter
@@ -73,6 +74,10 @@ class Estado {
 
     set simbolo(nuevoSimbolo){
         this._simbolo = nuevoSimbolo;
+    }
+
+    set aceptacion(aceptacion){
+        this._aceptacion = aceptacion;
     }
 
     addAdyacencia(nuevaAdyacencia){
@@ -91,6 +96,10 @@ class Estado {
 
     get adyacencias(){
         return this._adyacencias;
+    }
+
+    get aceptacion(){
+        return this._aceptacion;
     }
     
 
