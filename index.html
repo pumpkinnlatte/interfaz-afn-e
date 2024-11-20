@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Simulador</title>
+        <link rel="stylesheet" href="estilos.css"> <!-- Estilos generales -->
+        <link rel="stylesheet" href="transiciones.css"> <!-- Estilos para transiciones -->
+    </head>
+    
 <body>
     <header>
         <h1>Simulador de Autómatas</h1>
@@ -22,9 +24,7 @@
                 <div class="select-section">
                     <label for="estado-inicial">Estado Inicial:</label>
                     <select id="estado-inicial">
-                        <option value="">Seleccione</option>
-                        <option value="q1">q1</option>
-                        <option value="q2">q2</option>
+                        <option value="">Seleccione</option>S
                     </select>
                 </div>
                 <button class="btn">Estados de aceptación</button>
@@ -95,20 +95,42 @@
 
 <div id="modal-transiciones" class="modal">
     <div class="modal-content">
-        <h3>Gestión de Transiciones</h3>
-        <div class="modal-inputs">
-            <label for="transiciones-list">Listado de transiciones:</label>
-            <select id="transiciones-list"></select>
-            <button class="btn">Eliminar transición</button>
-        </div>
-        <div class="modal-inputs">
-            <label for="nueva-transicion">Nueva transición:</label>
-            <input type="text" id="nueva-transicion" placeholder="Ejemplo: q2 → q3">
-            <button class="btn">Añadir transición</button>
-        </div>
-        <button class="btn btn-accept">Aceptar</button>
+        <h3>Añadir Transición</h3>
+        <form id="form-transicion">
+            <div class="form-group">
+                <label for="from-state">From State:</label>
+                <select id="from-state" required>
+                    <option value="">Seleccione</option>
+                    <option value="F">F</option>
+                    <option value="G">G</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="input-symbol">Input Symbol:</label>
+                <select id="input-symbol" required>
+                    <option value="">Seleccione</option>
+                    <option value="a">a</option>
+                    <option value="b">b</option>
+                    <option value="λ">λ</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="to-state">To State:</label>
+                <select id="to-state" required>
+                    <option value="">Seleccione</option>
+                    <option value="D">D</option>
+                    <option value="E">E</option>
+                </select>
+            </div>
+            <div class="form-actions">
+                <button type="submit" class="btn btn-submit">Submit</button>
+                <button type="button" class="btn btn-cancel">Cancel</button>
+            </div>
+        </form>
     </div>
 </div>
+
+
 
 
 <div id="modal-aceptacion" class="modal">
@@ -140,19 +162,23 @@
         <h3>Gestión de Estados</h3>
         <div class="modal-inputs">
             <label for="estados-list">Listado de estados:</label>
-            <select id="estados-list"></select>
-            <button class="btn" id="btn-eliminar-estado">Eliminar estado</button>
+            <select id="estados-list">
+            </select>
+            <button class="btn">Eliminar estado</button>
         </div>
         <div class="modal-inputs">
             <label for="nuevo-estado">Añadir un nuevo estado:</label>
             <input type="text" id="nuevo-estado" placeholder="Ingrese un estado">
-            <button class="btn" id="btn-nuevo-estado">Añadir estado</button>
+            <button class="btn">Añadir estado</button>
         </div>
         <button class="btn btn-accept">Aceptar</button>
     </div>
 </div>
-    <script src="scripts/clases.js"></script>
-    <script src="scripts/script.js"></script>
+
+
+
+
     <script src="scripts/afn.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
